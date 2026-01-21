@@ -1,16 +1,32 @@
-# React + Vite
+/******\******* ✨ Windsurf Command ⭐ ******\*******/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# E-commerce Website
 
-Currently, two official plugins are available:
+This project aims to create a full-fledged e-commerce website with the following features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- User authentication and authorization
+- Product catalog with filtering and sorting
+- Shopping cart with real-time updates
+- Checkout process with payment gateway integration
+- Order management with order tracking and history
+- Product review and rating system
+- User profile management with order history and wishlist
+- Admin panel for managing products, orders, and users
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+- Frontend: React, React Router
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Payment Gateway: Stripe
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Development Road map
+
+- Week 1-2: Set up project structure, install dependencies, and create basic user authentication
+- Week 3-4: Implement product catalog and shopping cart features
+- week 5-6: Implement checkout process and order management features
+- week 7-8: Implement product review and rating system, and user profile management features
+- week 9-10: Implement admin panel features
+- week 11-12: Test and deploy the application
