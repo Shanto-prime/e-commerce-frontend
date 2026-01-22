@@ -1,5 +1,3 @@
-/******\******* ✨ Windsurf Command ⭐ ******\*******/
-
 # E-commerce Website
 
 This project aims to create a full-fledged e-commerce website with the following features:
