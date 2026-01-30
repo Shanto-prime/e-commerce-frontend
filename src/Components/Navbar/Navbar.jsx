@@ -1,11 +1,9 @@
-import { useState } from "react";
 import HeartSVG from "../CommonIcons/HeartSVG";
 import MapPinSVG from "../CommonIcons/MapPinSVG";
 import SearchSVG from "../CommonIcons/SearchSVG";
 import Button from "../UI/Button/Button";
 import Cart from "../UI/Checkbox/Cart";
-export default function Navbar() {
-    const [isLogin, setIsLogin] = useState(false);
+export default function Navbar({ cartItemCount, userStatus, setUserStatus }) {
     return (
         <>
             <nav className="container mx-auto">
@@ -23,23 +21,27 @@ export default function Navbar() {
                             <span>USD</span>
                         </div>
                         <div>
-                            {isLogin ? (
+                            {userStatus ? (
                                 <div className="flex items-center gap-1 ">
-                                    <button onClick={() => setIsLogin(false)}>
+                                    <button
+                                        onClick={() => setUserStatus(false)}
+                                    >
                                         Logout
                                     </button>
                                     <span className="text-xl">/</span>
-                                    <button onClick={() => setIsLogin(false)}>
+                                    <button
+                                        onClick={() => setUserStatus(false)}
+                                    >
                                         Profile
                                     </button>
                                 </div>
                             ) : (
                                 <div className="flex items-center gap-1 ">
-                                    <button onClick={() => setIsLogin(true)}>
+                                    <button onClick={() => setUserStatus(true)}>
                                         Signin
                                     </button>
                                     <span className="text-xl">/</span>
-                                    <button onClick={() => setIsLogin(true)}>
+                                    <button onClick={() => setUserStatus(true)}>
                                         Signup
                                     </button>
                                 </div>
@@ -67,7 +69,7 @@ export default function Navbar() {
                     </div>
                     <div className="flex items-center gap-2">
                         <HeartSVG />
-                        <Cart variant="ghost" />
+                        <Cart variant="ghost" cartItemCount={cartItemCount} />
                     </div>
                 </div>
             </nav>
