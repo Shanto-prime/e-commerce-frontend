@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MapPinSVG from "../CommonIcons/MapPinSVG";
+import Button from "../UI/Button/Button";
 export default function Navbar() {
     const [isLogin, setIsLogin] = useState(false);
     return (
@@ -43,8 +44,21 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
+                <div className="flex justify-between items-center">
+                    <div className="w-44">
+                        <img src="/public/logo-text.png" alt="" />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            id="search"
+                            placeholder="Search your goods here"
+                        />{" "}
+                        <Button className="rounded-l-none">Search</Button>
+                    </div>
+                    <div>liked & cart</div>
+                </div>
             </nav>
-            <h2>Navbar</h2>
         </>
     );
 }
