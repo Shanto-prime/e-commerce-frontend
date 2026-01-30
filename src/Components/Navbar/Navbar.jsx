@@ -3,6 +3,7 @@ import HeartSVG from "../CommonIcons/HeartSVG";
 import MapPinSVG from "../CommonIcons/MapPinSVG";
 import SearchSVG from "../CommonIcons/SearchSVG";
 import Button from "../UI/Button/Button";
+import Cart from "../UI/Checkbox/Cart";
 export default function Navbar() {
     const [isLogin, setIsLogin] = useState(false);
     return (
@@ -64,8 +65,9 @@ export default function Navbar() {
                             Search
                         </Button>
                     </div>
-                    <div>
+                    <div className="flex items-center gap-2">
                         <HeartSVG />
+                        <Cart variant="ghost" />
                     </div>
                 </div>
             </nav>
