@@ -1,5 +1,8 @@
 import { useState } from "react";
+import HeartSVG from "../CommonIcons/HeartSVG";
 import MapPinSVG from "../CommonIcons/MapPinSVG";
+import SearchSVG from "../CommonIcons/SearchSVG";
+import Button from "../UI/Button/Button";
 export default function Navbar() {
     const [isLogin, setIsLogin] = useState(false);
     return (
@@ -43,8 +46,29 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
+                <div className="flex justify-between items-center">
+                    <div className="w-44">
+                        <img src="/public/logo-text.png" alt="" />
+                    </div>
+                    <div className="flex items-center h-11.25">
+                        <div className="flex p-1 px-2 gap-2 h-full items-center border border-[var(--pg-1)] rounded-l-md rounded-r-none border-r-0">
+                            <SearchSVG />
+                            <input
+                                className="border-0 outline-0"
+                                type="text"
+                                id="search"
+                                placeholder="Search your goods here"
+                            />
+                        </div>
+                        <Button className="rounded-l-none rounded-r-md h-full">
+                            Search
+                        </Button>
+                    </div>
+                    <div>
+                        <HeartSVG />
+                    </div>
+                </div>
             </nav>
-            <h2>Navbar</h2>
         </>
     );
 }

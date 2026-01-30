@@ -3,7 +3,12 @@
     --font-inter: "Inter", sans-serif;
 }
 :root {
+    font-size: 16px;
     --pg-1: #666666;
+    --primary: #00b307;
+    --primary-hover: #2c742f;
+    --primary-bg: #d1d9d1;
+    --primary-bg-hover: #bbc9bb;
 }
 
 body {
