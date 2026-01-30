@@ -1,0 +1,41 @@
+export default function SearchSVG() {
+    return (
+        <>
+            <svg
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                width="20.000000"
+                height="20.000000"
+                fill="none"
+            >
+                <rect
+                    id="Search"
+                    width="20.000000"
+                    height="20.000000"
+                    x="0.000000"
+                    y="0.000000"
+                />
+                <g id="Group">
+                    <path
+                        id="Vector"
+                        d="M9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333Z"
+                        stroke="rgb(25.5,25.5,25.5)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.500000"
+                    />
+                    <path
+                        id="Vector"
+                        d="M17.4999 17.5L13.8749 13.875"
+                        fillRule="nonzero"
+                        stroke="rgb(25.5,25.5,25.5)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.500000"
+                    />
+                </g>
+            </svg>
+        </>
+    );
+}
