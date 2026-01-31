@@ -6,7 +6,7 @@ import Heart from "../UI/Checkbox/Heart";
 export default function Navbar({ cartItemCount, userStatus, setUserStatus }) {
     return (
         <>
-            <nav className="container mx-auto">
+            <section className="container mx-auto">
                 <div className="flex justify-between items-center text-[var(--pg-1)]">
                     <div className="flex items-center cursor-pointer">
                         <MapPinSVG className="h-6 w-6" />
@@ -70,6 +70,30 @@ export default function Navbar({ cartItemCount, userStatus, setUserStatus }) {
                     <div className="flex items-center gap-2">
                         <Heart variant="ghost" />
                         <Cart variant="ghost" cartItemCount={cartItemCount} />
+                    </div>
+                </div>
+            </section>
+            <nav className="bg-[var(--dark-bg)]">
+                <div className="container mx-auto flex justify-between">
+                    <div className="flex items-center gap-2 text-white">
+                        <button>Home</button>
+                        <ul className="flex items-center justify-between text-white">
+                            <li>
+                                <a href="#">Featured Products</a>
+                            </li>
+                            <li>
+                                <a href="#">New Arrivals</a>
+                            </li>
+                            <li>
+                                <a href="#">Best Sellers</a>
+                            </li>
+                            <li>
+                                <a href="#">Popular Categories</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="flex items-center gap-2 text-white">
+                        <span>(215)-1234 1589</span>
                     </div>
                 </div>
             </nav>
