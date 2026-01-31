@@ -1,8 +1,8 @@
-import HeartSVG from "../CommonIcons/HeartSVG";
 import MapPinSVG from "../CommonIcons/MapPinSVG";
 import SearchSVG from "../CommonIcons/SearchSVG";
 import Button from "../UI/Button/Button";
 import Cart from "../UI/Checkbox/Cart";
+import Heart from "../UI/Checkbox/Heart";
 export default function Navbar({ cartItemCount, userStatus, setUserStatus }) {
     return (
         <>
@@ -68,7 +68,7 @@ export default function Navbar({ cartItemCount, userStatus, setUserStatus }) {
                         </Button>
                     </div>
                     <div className="flex items-center gap-2">
-                        <HeartSVG />
+                        <Heart variant="ghost" />
                         <Cart variant="ghost" cartItemCount={cartItemCount} />
                     </div>
                 </div>
