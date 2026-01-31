@@ -22,47 +22,47 @@ export default function Cart({
         }
     };
 
-    // handleCartItemCount = () => {
-    //     const cartItems = localStorage.getItem("cartItems");
-    //     const itemCount = cartItems ? JSON.parse(cartItems).length : 0;
-    //     return itemCount;
-    // };
-
     return (
-        <div className="relative group">
-            <button
-                className={`${base} ${variants[variant]} ${className}`}
-                {...props}
-            >
-                <svg
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    width="30.000000"
-                    height="30.000000"
-                    fill="none"
+        <div className="flex">
+            <div className="relative group">
+                <button
+                    className={`${base} ${variants[variant]} ${className}`}
+                    {...props}
                 >
-                    <rect
-                        id="Bag"
-                        width="20.000000"
-                        height="20.000000"
-                        x="0.000000"
-                        y="0.000000"
-                    />
-                    <path
-                        id="Rectangle"
-                        d="M17.5 17.5L2.5 17.5L4.16667 8.33333L6.66667 8.33333L13.3333 8.33333L15.8333 8.33333L17.5 17.5ZM6.66667 8.33333L6.66667 5.83333C6.66667 3.99238 8.15905 2.5 10 2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333L13.3333 8.33333M6.66667 8.33333L6.66667 10.8333M13.3333 8.33333L13.3333 10.8333"
-                        fillRule="nonzero"
-                        stroke={getBagColor()}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.300000"
-                    />
-                </svg>
-            </button>
-            <span className="absolute top-0 right-0 bg-[var(--primary)] transition-all duration-200 group-hover:bg-[var(--primary-hover)] text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px]">
-                {cartItemCount < 10 ? cartItemCount : "9+"}
-            </span>
+                    <svg
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnsXlink="http://www.w3.org/1999/xlink"
+                        width="30.000000"
+                        height="30.000000"
+                        fill="none"
+                    >
+                        <rect
+                            id="Bag"
+                            width="20.000000"
+                            height="20.000000"
+                            x="0.000000"
+                            y="0.000000"
+                        />
+                        <path
+                            id="Rectangle"
+                            d="M17.5 17.5L2.5 17.5L4.16667 8.33333L6.66667 8.33333L13.3333 8.33333L15.8333 8.33333L17.5 17.5ZM6.66667 8.33333L6.66667 5.83333C6.66667 3.99238 8.15905 2.5 10 2.5C11.8409 2.5 13.3333 3.99238 13.3333 5.83333L13.3333 8.33333M6.66667 8.33333L6.66667 10.8333M13.3333 8.33333L13.3333 10.8333"
+                            fillRule="nonzero"
+                            stroke={getBagColor()}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.300000"
+                        />
+                    </svg>
+                </button>
+                <span className="absolute top-0 right-0 bg-[var(--primary)] transition-all duration-200 group-hover:bg-[var(--primary-hover)] text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px]">
+                    {cartItemCount < 10 ? cartItemCount : "9+"}
+                </span>
+            </div>
+            <div className="flex flex-col items-start ml-2">
+                <span className="text-[var(--pg-1)]">Shopping Cart:</span>
+                <span>${cartItemCount * 100}</span>
+            </div>
         </div>
     );
 }
